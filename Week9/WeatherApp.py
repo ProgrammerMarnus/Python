@@ -53,6 +53,8 @@ def list_cities():
 def settings():
     with open("settings.json", "r") as json_file:
         data = json.load(json_file)
+
+    #TODO:make display to show current settings and only ask for new value if user wants to change it
     data["Settings"]["Temperature_Measurement"] = input("Enter temperature measurement (C or F): ")
 
     with open("settings.json", "w") as json_file:
