@@ -38,7 +38,6 @@ def get_weather_for_city(days=1):
     city = input("Enter the city name: ")
     coordinates = WEATHER_FETCHER.get_coordinates(city)
     if not coordinates:
-        print(f"City '{city}' not found. Please try again.")
         return None
     weather_data = WEATHER_FETCHER.fetch_weather(coordinates[0], coordinates[1], days)
     if not weather_data:
