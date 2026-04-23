@@ -53,7 +53,7 @@ def list_cities():
 def settings():
     with open("settings.json", "r") as json_file:
         data = json.load(json_file)
-        data["Settings"]["Temperature_Measurement"] = input("Enter temperature measurement (C or F): ")
+    data["Settings"]["Temperature_Measurement"] = input("Enter temperature measurement (C or F): ")
 
     with open("settings.json", "w") as json_file:
         json.dump(data, json_file, indent=4)
