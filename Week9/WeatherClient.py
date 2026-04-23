@@ -25,7 +25,7 @@ class WeatherFetcher:
         else:
             url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max,winddirection_10m_dominant&timezone=auto"
         try:
-            response = requests.get(url)
+            response = requests.get(url,self.timeout)
             response.raise_for_status()
             data = response.json()
             return data['current_weather'] if days == 1 else data['daily']
