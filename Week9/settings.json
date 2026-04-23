@@ -1,0 +1,10 @@
+{
+    "Settings": {
+        "Temperature_Measurement": "c",
+        "Favourite_Cities": [
+            "Johannesburg",
+            "Cape Town",
+            "Durban"
+        ]
+    }
+}
